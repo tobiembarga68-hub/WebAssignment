@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA&CO</title>
+    <link rel="icon" href="./image/IMG-20260725-WA0000.jpg" type="image/icons">
+    <style>
+     *{
+    margin: 0;
+    padding: 0;
+}
+    .main{
+    display: flex;
+    align-items: start;
+    font-family: 'Inter', sans-serif;
+}
+    :root{
+    --navy: #0d1b34;
+    --navy-soft: #162a4f;
+    --navy-deep: #081124;
+    --gold: #d9ad4f;
+    --gold-bright: #f0c874;
+    --gold-deep: #a9762a;
+    --cream: #faf5e9;
+    --paper: #fffdf9;
+    --ink: #1b2233;
+    --muted: #656e7e;
+    --line: #ece5d4;
+    --line-soft: #eeeae0;
+  }
+   .img{
+    flex: 1;
+    height: 100vh;  
+  }
+  .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .content{
+    text-align: center;
+    margin: 10px 50px;
+  }
+  p{
+    color: rgb(77, 77, 77);
+  }
+  .fcfa{
+    font-weight: 100;
+    font-size: 30px;
+  }
+ .sec{
+    text-align: left;
+    margin: 40px 0;
+ }
+ .secPara{
+    text-align: left;
+    margin: 40px 0;
+ }
+ .two-column{
+    display: flex;
+    margin: 20px 0;
+ }
+ .h3{
+    flex: 1;
+
+ }
+ .two-column p{
+    flex: 2;
+    text-align: right;
+ }
+ .size{
+    display: flex;
+    justify-content: space-between;
+  
+ }
+ .size div{
+    border: 1px solid var(--line-soft);
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+ }
+ .block2{
+    background: var(--gold-deep);
+    color: var(--cream);
+ }
+
+.cart{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+}
+.btn{
+    padding: 20px;
+    width: 340px;
+    background: var(--gold-deep);
+    border: 1px solid var(--line-soft);
+    border-radius: 5px;
+    color: var(--cream);
+    cursor: pointer;
+}
+.btn:hover{
+    background: var(--gold);
+}
+.sign{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0 20px;
+}
+.sign button{
+    width: 42px;
+    height: 42px;
+    background: var(--gold-deep);
+    color: var(--cream);
+    border: 1px solid var(--line-soft);
+    cursor: pointer;
+
+
+}
+.sign button:hover{
+    background: var(--muted);
+}
+
+ 
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="img"><img src="./image/pedri.jpg" alt=""></div>
+        <div class="content">
+            <div class="sec">
+                <p>Home/Heauxm/Yang set</p>
+                <br>
+                <h1>Yang set</h1>
+                <br>
+                <p class="fcfa">25000FRS</p>
+            </div>    
+                <div class="secPara">
+                    <P>We're already on the lookout for the best fabric to bring back your
+                    <br><br>
+                     favourite and most comfortable Yang set and for the homebody,
+                     <br><br>
+                     we present to you the Yang set in this breathable lush cotton.
+                     <br><br>
+                     -Comes with detachable belt 
+                     <br><br>
+                     -Flared Trouser legs with elastic fastening on wait
+                     <br>
+                     </P>
+                </div>
+
+            <div class="two-column">
+                <h3>Size</h3>
+                <p>View chart</p>
+            </div>
+            <div class="size">
+                <div class="block" id="size1">10</div>
+                <div class="block" id="size2">12</div>
+                <div class="block" id="size3">14</div>
+                <div class="block2" id="size4">16</div>
+                <div class="block" id="size5">18</div>
+                <div class="block" id="size6">20</div>
+                <div class="block" id="size7">20</div>
+            </div>
+            <div class="cart">
+                    <button class="btn">🛒 ADD TO CART</button>
+                <div class="sign">
+                  <button id="minus">-</button>
+                  <span id="count">0</span>
+                  <button id="plus">+</button>               
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        //minus&plus button
+    let count = 0;
+    const display = document.getElementById("count");
+
+    document.getElementById("plus").onclick = function(){
+
+            count++;
+            display.innerHTML = count;
+    }
+    document.getElementById("minus").onclick = function(){
+
+            if(count >0){
+            count--;
+            display.innerHTML=count;
+            }
+    }
+    //size of product
+    const size1=document.getElementById("size1");
+    const size2=document.getElementById("size2");
+    const size3=document.getElementById("size3");
+    const size4=document.getElementById("size4");
+    const size5=document.getElementById("size5");
+    const size6=document.getElementById("size6");
+    const size7=document.getElementById("size7");
+
+    const size = [size1,size2,size3,size4,size5,size6,size7];
+
+    size.forEach(function(size){
+        size.onclick = function(){
+            size.forEach(function(div){
+                div.classList.remove("block2");
+            });
+        this.classList.add("block2");
+        };
+    })
+
+    </script>
+</body>
+</html>

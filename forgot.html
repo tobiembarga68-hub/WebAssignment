@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background: #0aee1d;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            display: flex;
+
+        }
+        .main{
+            display: flex;
+            overflow: hidden;
+            background: #ffff;
+            border: 1px solid white;
+            border-radius: 25px;
+            width: 1000px;
+            height: 500px;
+
+        }
+        .img{
+            flex: 1;
+            justify-content: center;
+            align-items: center;
+            margin: 70px 50px;
+
+
+        }
+        img{
+            width: 116%;
+
+            
+            /* max-width: 450px; */
+        }
+        .content{
+            justify-content: center;
+            align-items: center;
+            margin: 100px;
+        }
+        .content h1{
+            color: #085800;
+            font-weight: bold;
+            font-size: 3em;
+            margin-bottom: 30px;
+        }
+        .content p{
+            font-size: 20px;
+            margin: 10px 0;
+            color: #666;
+            line-height: 1.5;
+        }
+        input{
+            width: 100%;
+            border: none;
+            outline:none;
+            padding: 5px 0;
+            border-bottom: 2px solid #085800;
+            font-size: 17px;
+            margin-bottom: 40px;
+
+        }
+        .botton{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .botton a{
+            color: #085800;
+            text-decoration: none;
+        }
+        .botton a:hover{
+            color: #0aee1d;
+            text-decoration: underline;
+        }
+        .botton .btn{
+            border: none;
+            background: #085800;
+            color: white;
+            padding: 12px 35px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .botton .btn:hover{
+            transform: translateY(5px);
+            background: #0aee1d;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="img"><img src="./image/pro.jpg" alt="" width="400px"></div>
+    
+        <div class="content">
+            <h1>Forgot <br> Password?</h1>
+            <p>Enter the email address <br> associated with your account</p>
+            <input type="email" name="email" id="email" placeholder="Enter Email Address">
+            <div class="botton">
+                <a href="#">Try another way</a>
+                <button class="btn" id="btnCon">Next</button>
+            </div>
+
+        </div>
+    </div>
+    <script>
+    //get element by thier id
+    const emailIput = document.getElementById("email");
+    const nextPage = document.getElementById("btnCon");
+    //funtion
+    nextPage.addEventListener("click", 
+        function (){
+            const email=emailIput.value.trim();
+            if(email===""){
+                alert("please enter your email address");
+                emailIput.focus();
+                return;
+            }
+             alert("password reset link sent to:" +email);
+        }
+        
+    )
+    </script>
+</body>
+</html>
