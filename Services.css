@@ -2,10 +2,10 @@
   :root{
     --navy: #0d1b34;
     --navy-soft: #162a4f;
-    --navy-deep: #081124;
-    --gold: #d9ad4f;
-    --gold-bright: #f0c874;
-    --gold-deep: #a9762a;
+    --navy-deep: hsl(221, 64%, 9%);
+    --gold: green;
+    --gold-bright: #80db7d;
+    --gold-deep: rgb(7, 216, 7);
     --cream: #faf5e9;
     --paper: #fffdf9;
     --ink: #1b2233;
@@ -34,10 +34,13 @@
     position: sticky;
     top: 0;
     z-index: 50;
-    background: rgba(234, 218, 186, 0.88);
+    background: whitesmoke;
     backdrop-filter: blur(10px) saturate(1.2);
     border-bottom: 1px solid var(--line);
   }
+  .logo{font-weight:500;font-size:0.5rem;letter-spacing:1px; align-items: center; display: flex;flex-direction: column;}
+    .logo img{width: 30px; height: 30px;}
+  .logo span{font-weight: bolder; color: green;}
   .nav-wrap{
     max-width: 1360px;
     margin: 0 auto;
@@ -46,6 +49,9 @@
     align-items: center;
     justify-content: space-between;
     gap: 24px;
+  }
+  .nav-link{
+    color: var(--gold);
   }
   .brand{
     display:flex;
@@ -480,11 +486,12 @@
     border: 2px solid rgba(255,255,255,.85);
     display:flex; align-items:center; justify-content:center;
     background: rgba(255,255,255,.03);
+    cursor: default;
   }
   .footer-logo span{
     font-family:'Baloo 2', sans-serif;
     font-weight:700;
-    color:#fff;
+    color:green;
     font-size: 25px;
     letter-spacing: 1px;
   }

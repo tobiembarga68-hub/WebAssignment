@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTN-Confirm PAyment</title>
+    <link rel="icon" href="./image/aura-logo.svg" type="image/icons">
+    <style>
+    :root{
+    --gold:#c99a3b;
+    --gold-dark:#b8862a;
+    --navy:#0b1440;
+    --lavender:#e7e9fb;
+    --tan:#e9d6ae;
+    --ink:#14141a;
+    --muted:#5c5c66;
+    --line:#e4e2da;
+    --cream:#fdfcf9;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:'Segoe UI',Helvetica,Arial,sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    -webkit-font-smoothing:antialiased;
+  }
+    .container{
+    padding: 10px;
+    margin:20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;
+    align-content: center;
+
+  }
+  h1{
+    margin: 10px 0;
+  }
+  span{
+    color: orange;
+  }
+  .detail{
+    margin:10px 0;
+    font-weight: 500;
+  }
+  .amount{
+    display: flex;
+    justify-content: space-between;
+    background: orange;
+    padding: 7px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+
+  }
+  .amount p{
+    font-size: 13px;
+    font-weight: 600;
+    margin-left: 10px;
+
+  }
+  .amount span{
+    color: black;
+    font-size: 13px;
+    font-weight: bold;
+  }
+  .country{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    
+  }
+  .class-1{
+    background: #fff;
+    border: 1px solid  #bbb;
+    border-radius: 4px;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    padding: 5px;
+    cursor: pointer;
+
+  }
+  .class-1 span{
+    color: black;
+  }
+.country input{
+    width: 100%;
+    background: #fff;
+    border: 1px solid  #bbb;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+}
+.country input::placeholder{
+    color: black;
+    font-weight: 500;
+}
+.shift{
+    margin-top: 30px;
+}
+label{
+    margin:10px 0;
+    font-weight: 500;
+}
+.shift input{
+    padding: 6px;
+    width: 90%;
+    background: #fff;
+    border: 1px solid  #bbb;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+}
+.button{
+    display: block;
+    justify-content: space-between;
+    gap: 200px;
+    margin-top: 50px;
+    align-items: center;
+}
+.cancel{
+    background: transparent;
+    border: none;
+    color: black;
+    font-weight: 750;
+    cursor: pointer;
+    
+}
+.pay{
+    margin-left: 290px;
+    padding: 8px 30px;
+    background: orange;  
+    transition: background 2s;
+    
+}
+.pay:hover{
+    border: none;
+    color: white;
+    cursor: pointer;
+    background: rgb(180, 135, 50);
+
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img  src="./image/icons8-arrow-pointing-left-90.png" alt="" width="50px" style="cursor: pointer;">
+        <h1>Pay with <span>Orange</span> Orange Money</h1>
+        <p class="detail">Payment details</p>
+        <div class="amount">
+            <p>Amount to pay</p>
+            <span>50000FCFA</span>
+        </div>
+        <form action="" id="paymentForm">
+            <div class="country">
+                <div class="country class-1">
+                    <img src="./image/twemoji--flag-cameroon.svg" alt="" width="20px">
+                    <span>+237</span>
+                </div>
+                <input type="tell" id="tel" placeholder="6 72 73 32 77" required>
+            </div>
+            <div class="shift">
+                <label for="pinCode">Pincode</label><br>
+                <input type="password" id="pincode" placeholder="XXXXX" required>
+                <br><br>
+                <label for="conPinCode">Confirm Pincode</label><br>
+                <input type="password" id="conPinCode" placeholder="XXXXX" required>                
+            </div>
+            <div class="button">
+                <button type="button" class="cancel" onclick="resetForm()">Cancel Payment</button>
+                <button type="submit" class="pay" onclick="window.location.href='./succesful.html'">Pay Now</button>
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>

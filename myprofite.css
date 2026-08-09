@@ -1,0 +1,159 @@
+ :root{
+    --gold:#c99a3b;
+    --gold-dark:#b8862a;
+    --navy:#0b1440;
+    --lavender:#e7e9fb;
+    --tan:#e9d6ae;
+    --ink:#14141a;
+    --muted:#5c5c66;
+    --line:#e4e2da;
+    --cream:#fdfcf9;
+  }
+    *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:'Segoe UI',Helvetica,Arial,sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    -webkit-font-smoothing:antialiased;
+
+  } 
+ header{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:10px 6%;
+    background: whitesmoke;
+    border-bottom:1px solid var(--line);
+    position:sticky;top:0;z-index:50;
+  }
+  header a{text-decoration:none;color:inherit;}
+  header ul{list-style:none;}
+  header button{font-family:inherit;cursor:pointer;border:none;}
+  nav ul{display:flex;gap:36px;font-weight:600;font-size:0.95rem;}
+  nav a{position:relative;transition:color .2s;}
+  nav a:hover{color:green;}
+  .header-icons{display:flex;gap:20px;align-items:center;font-size:1.1rem;}
+  .header-icons button{background:none;color:#fdfcf9;font-size:1.15rem;position:relative;}
+  .logo{font-weight:500;font-size:0.5rem;letter-spacing:1px; align-items: center; display: flex;flex-direction: column;}
+  .logo img{width: 30px; height: 30px;}
+  .logo span{font-weight: bolder; color: green;}
+  p{
+    font-weight: bolder;
+    color: black;
+    font-size: 15px;
+  }
+  h3{
+    font-weight: bold;
+    font-size: 23px;
+    color: black;
+
+  }
+  .prof h3{
+    cursor: pointer;
+  }
+  span{
+    font-weight: lighter;
+    font-size: 10px;
+    cursor: pointer;
+  }
+  .message{
+    font-weight: lighter;
+  }
+  .logo-title{
+    font-size: 15px;
+    font-weight: bold;
+    color: green;
+  }
+  button{
+    width: 15%;
+    height: 30px;
+    background: green;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+  }
+  .class-1:hover{
+    background: black;
+    padding-bottom: 20px;
+  }
+  .container{
+    padding: 10px;
+    margin:20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;
+    align-content: center;
+
+  }
+  .title{
+    display: flex;
+    padding-bottom: 10px;
+    justify-content: space-between;
+    border-bottom: 0.1px solid rgb(231, 231, 231);
+    margin-bottom: 20px;
+  }
+  .main{
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 20px;
+  }
+  .profit{
+    line-height: 1.7;
+  }
+  ul{
+    margin-top: 30px;
+    line-height: 2;
+  }
+  li{
+    list-style: none;
+  }
+  li a{
+    text-decoration: none;
+    color: black;
+
+  }
+    li a:hover{
+        color: green;
+    }
+.person{
+    color: green;
+    font-weight: bold;
+}
+.class-2{
+    border-radius: 50%;
+    width: 50%;
+    height: 85px;
+    background: #d8d7d5;
+}
+img{
+    object-fit: cover;
+}
+.personal-infor{
+    line-height: 1.6;
+}
+.cards{
+    display: grid;
+    margin-top: 30px;
+    grid-template-columns: 200px 200px;
+    grid-template-rows: 100px 100px 100px;
+    row-gap: 10px;
+    column-gap: 10px;
+    
+}
+.card-card{
+    background: whitesmoke;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    transition: background 2s;
+
+}
+.card-card:hover{
+  background: greenyellow;
+  cursor: pointer;
+  margin-bottom: 20px;
+
+}

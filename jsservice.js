@@ -13,20 +13,21 @@
   }
 
   // Mobile menu
-  const burger = document.getElementById('burgerToggle');
-  const primaryNav = document.getElementById('primaryNav');
-  burger.addEventListener('click', () => {
-    primaryNav.classList.toggle('open');
-  });
+  // const burger = document.getElementById('burgerToggle');
+  // const primaryNav = document.getElementById('primaryNav');
+  // burger.addEventListener('click', () => {
+  //   primaryNav.classList.toggle('open');
+  //   window.location.href = "?"
+  // });
 
-  // Nav active state
-  document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', (e) => {
-      document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-      link.classList.add('active');
-      primaryNav.classList.remove('open');
-    });
-  });
+  // // Nav active state
+  // document.querySelectorAll('.nav-link').forEach(link => {
+  //   link.addEventListener('click', (e) => {
+  //     document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+  //     link.classList.add('active');
+  //     primaryNav.classList.remove('open');
+  //   });
+  // });
 
   // Search toggle
   const searchToggle = document.getElementById('searchToggle');

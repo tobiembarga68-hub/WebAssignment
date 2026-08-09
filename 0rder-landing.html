@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <link rel="icon" href="./image/aura-logo.svg" type="image/icons">
+    <style>
+      :root{
+    --gold:#c99a3b;
+    --gold-dark:#b8862a;
+    --navy:#0b1440;
+    --lavender:#e7e9fb;
+    --tan:#e9d6ae;
+    --ink:#14141a;
+    --muted:#5c5c66;
+    --line:#e4e2da;
+    --cream:#fdfcf9;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:'Segoe UI',Helvetica,Arial,sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    -webkit-font-smoothing:antialiased;
+  }
+  /* ---------- Header ---------- */
+  header{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:20px 6%;
+    background: whitesmoke;
+    border-bottom:1px solid var(--line);
+    position:sticky;top:0;z-index:50;
+  }
+  header a{text-decoration:none;color:inherit;}
+  header ul{list-style:none;}
+  header button{font-family:inherit;cursor:pointer;border:none;}
+  nav ul{display:flex;gap:36px;font-weight:600;font-size:0.95rem;}
+  nav a{position:relative;transition:color .2s;}
+  nav a:hover{color:green;}
+  .header-icons{display:flex;gap:20px;align-items:center;font-size:1.1rem;}
+  .header-icons button{background:none;color:#fdfcf9;font-size:1.15rem;position:relative;}
+  .logo{font-weight:500;font-size:0.5rem;letter-spacing:1px; align-items: center; display: flex;flex-direction: column;}
+  .logo img{width: 30px; height: 30px;}
+  .logo span{font-weight: bolder; color: green;}
+  .container{
+    background: #14141a;
+    height: 550px;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+     background: linear-gradient(90deg, rgb(176, 233, 176), rgb(241, 243, 241));
+  }
+  .main{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 1000px;
+
+  }
+  .arrow-left{
+    width: 30px;
+    height: 30px;
+    margin-left: 30px;
+    cursor: pointer;
+  }
+  .header{
+    font-size: 32px;
+    color: black;
+    margin-top: 90px;
+    text-decoration: underline;
+
+  }
+  .section{
+    border-bottom: 1px solid black;
+    margin: 20px 0;
+    padding: 20px;
+    text-align: center;
+
+  }
+  .title{
+    display: grid;
+    grid-template-columns: 80px 1fr 150px 200px 80px;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+    margin:auto;
+
+  }
+  .product-1{
+   margin-bottom: 50px;
+   padding: 10px 0;
+   color: black;
+   font-weight: 200;
+   min-height: 100px;
+ }
+ .product-1 img{
+    object-fit: cover;
+ }
+ .num,
+ .proNa,
+ .price{
+    margin: 0;
+ }
+ 
+  .button-btn{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+
+  }
+  .button-btn button{
+    padding: 10px;
+    border: 1px solid rgb(201, 196, 196);
+    border-radius: 5px;
+    height: 45px;
+    width: 30%;
+    background: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+   
+    
+  }
+    .button-btn .apply{
+      width: 10%;
+      margin-right: 200px;
+      color: green;
+       transition: background 0.9s, transform 0.5s;
+      
+  }
+  .button-btn button:hover{
+
+    background: green;
+    transform: rotate(360deg);
+    color: white;
+  }
+  .pay{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-right: 40px;
+    color: black;
+  }
+  .last{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    height: 45px;
+    width: 30%;
+    background: green;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 700px;
+    margin-bottom: 100px;
+
+  }
+  .last:hover{
+    background: green;
+  }
+    </style>
+</head>
+<body>
+    <header>
+  <div class="logo"><a href="#"><img src="./image/aura-logo.svg" alt="Aura Logo" width="50"></a><span>AURA</span>&CO<br>  
+  </div>
+  <nav id="navMenu">
+    <ul>
+      <li><a href="#top">Home</a></li>
+      <li><a href="productsforstudent.html">Products</a></li>
+      <li><a href="ourservices.html">Our Services</a></li>
+    </ul>
+  </nav>
+  <div class="header-icons">
+    <button aria-label="Search">🔍</button>
+    <button aria-label="Account">👤</button>
+    <button aria-label="Cart" id="cartBtn">🛍️<span class="cart-count" id="cartCount">0</span></button>
+  </div>
+</header>
+  <div class="container">
+    <div class="main">
+            <h3 class="header">My card</h3>
+        <div class="section">
+            <div class="title">
+                <h3>image</h3>
+                <h3>Products</h3>
+                <h3>Quantity</h3>
+                <h3>Price</h3>
+                <h3>Delete</h3>
+            </div>
+            <div class="title product-1" id="productDetail">
+                <img src="./image/pullover.jpg" alt="" width="50px" height="50px">
+                <span class="num">02</span>
+                <span class="prodNa">Pullover</span>
+                <span class="price">300000FCFA</span>
+                <span><img src="./image/basil--cross-outline.svg" alt="cross" width="50px" height="20"></span>
+            </div>
+            <div class="title product-1" id="productDetail">
+                <img src="./image/pullover.jpg" alt="" width="50px" height="50px">
+                <span class="num">02</span>
+                <span class="prodNa">Pullover</span>
+                <span class="price">300000FCFA</span>
+                <span><img src="./image/basil--cross-outline.svg" alt="cross" width="50px" height="20"></span>
+            </div>
+
+        </div>
+        <div class="button-btn">
+            <button>Enter coupon code</button>
+            <button class="apply" onclick="window.location.href='./order.html'">Apply</button>
+            <div class="pay">
+                <span>Total:</span>
+                <span>300000FCFA</span>
+            </div>
+        </div>
+        <button class="last">Process checkout</button>
+  </div>  
+  </div>
+    
+</body>
+</html>

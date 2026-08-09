@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment-Form</title>
+     <link rel="icon" href="./image/aura-logo.svg" type="image/icons">
+     <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        
+        }
+        body{
+            justify-content: center;
+            display: flex;
+            text-align: center;
+            background: white;
+            
+        }
+        form{
+            margin-top: 10px;
+            padding: 5px;
+            border: transparent;
+            border-radius: 20px;
+            background: whitesmoke;
+        }
+        h1{
+            font-size: 40px;
+            color: green;
+            margin-bottom: 20px;
+        }
+
+        p{
+         margin-top: 50px;
+         margin-right: 78%;
+         font-weight: bold;
+
+            
+        }
+        .first input{
+            height: 40px;
+            width: 100%;
+            padding: 5px;
+           border: 1px solid rgb(56, 55, 55);
+           background: transparent; 
+           cursor: default;
+           border-radius: 5px;
+        }
+        .last input{
+            height: 40px;
+            width: 100%;
+            padding: 5px;
+            border: 1px solid black;
+            background: transparent;
+            cursor: default;
+            border-radius: 5px;
+        }
+        .first input:hover{
+            border-color: green;
+        }
+        .last input:hover{
+            border-color: green;
+        }
+        .first input::placeholder{
+            color: rgb(160, 161, 160);
+            font-weight: 200;
+            
+        }
+        .last input::placeholder{
+            color: rgb(160, 161, 160);
+            font-weight: 200;
+            
+        }
+        
+        .name{
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            text-align: center;
+            
+        }
+        .const{
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            text-align: center;
+            margin: 30px;
+            margin-bottom: 80px;
+        }
+        .email input{
+            height: 40px;
+            width: 100%;
+            padding: 5px;
+           border: 1px solid rgb(56, 55, 55);
+           background: transparent; 
+           cursor: default;
+           border-radius: 5px;
+        }
+        .phone input{
+            height: 40px;
+            width: 100%;
+            padding: 5px;
+            border: 1px solid black;
+            background: transparent;
+            cursor: default;
+            border-radius: 5px;
+        }
+        .email label{
+            margin-right: 76%;
+            font-weight: bold;
+        }
+        .phone label{
+            margin-right: 76%;
+            font-weight: bold;
+        }
+        .email input:hover{
+            border-color: green;
+        }
+        .phone input:hover{
+            border-color: green;
+        }
+        .email input::placeholder{
+            color: rgb(160, 161, 160);
+            font-weight: 200;
+            text-align: center;
+            
+        }
+        .phone input::placeholder{
+            color: rgb(160, 161, 160);
+            font-weight: 200;
+
+            
+        }
+        .location{
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            margin-bottom: 60px;
+
+        }
+        .ph{
+            margin-right: 90%;
+            font-weight: bold;
+            margin-top: 50;
+        }
+        .location .country{
+            height: 40px;
+            border: 1px solid black;
+            padding: 5px;
+            width: 120px;
+            border-radius: 5px;
+            text-align: center;
+
+        }
+         .location .country:hover{
+            border: 3px solid green;
+
+         }
+        .location input{
+            width: 120px;
+            border: 1px solid black;
+            padding: 5px;
+            text-align: center;
+            cursor: default;
+            border-radius: 5px;
+        }
+        .location input::placeholder{
+            color: black;
+        }
+        .location input:hover{
+            border: 3px solid green;
+
+        }  
+        .fcfa{
+            height: 40px;
+            border: 2px solid black;
+            border-radius: 5px;
+
+        }   
+        .fcfa::placeholder{
+            text-align: right;
+            margin-right: 8px;
+        }
+        .btn{
+            width: 30%;
+            height: 40px;
+            text-align: center;
+            color: white;
+            border: none;
+            background: green;
+            border-radius: 10px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        .btn:hover{
+            background: black;
+        }
+
+
+       
+     </style>
+</head>
+<body>
+    <form id="paymentForm">
+        <h1>Payment Form</h1>
+        <p>Name</p>
+        <div class="name">
+            <div class="first">
+                <input type="text" name="firstName" id="FirstName" placeholder="FirstName">
+            </div>
+               <div class="last"><input type="text" name="lastName" id="LastName" placeholder="LastName"></div>
+        </div>
+                 <br><br>
+        <div class="const">
+            <div class="email">
+                <label for="email">Email</label><br>
+                <input type="email" name="email" id="email" placeholder="you@example.com"><br>
+            </div>
+            <div class="phone">
+                <label for="phone">Phone</label><br>
+                <input type="tel" name="phone" id="phone" placeholder="+237 ********">
+            </div>
+        </div>
+        <label for="country" class="ph">Country</label>
+        <div class="location">
+
+            <select name="country" class="country" id="country" aria-placeholder="select your country">
+                <option value="Cameroun">Cameroun</option>
+                <option value="Nigeria">Nigeria</option>
+                <option value="Gabon">Gabon</option>
+                <option value="RCA">RCA</option>
+            </select>
+            <input type="text" name="city" id="city" placeholder="City">
+            <input type="text" name="region" id="region" placeholder="region, street, house number">
+
+        </div>
+        <input type="money" class="fcfa" placeholder="FCFA" id="fcfa">
+        <br><br>
+        <button class="btn" id="Btn" type="submit">Send</button>
+    </form>
+
+    <script>
+        const form = document.getElementById('paymentForm');
+        form.addEventListener('submit', function(e){
+
+            e.preventDefault;
+
+            const firstName = document.getElementById('firstName').value.trim();
+            const lastName = document.getElementById('lastName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const country = document.getElementById('country').value.trim();
+            const money = document.getElementById('fcfa').value.trim();
+            const btn = document.getElementById('Btn').value.trim();
+
+            if(firstName === ""||lastName ===""||email ===""||phone === ""||country ===""||money ===""||btn === ""){
+                alert("please fill in all field! ")
+                return;
+            }
+            console.log({
+                firstName,
+                lastName,
+                email,
+                phone,
+                country,
+                money,
+                btn,
+
+            })
+            alert("payment submitted successfully!");
+            form.reset();
+        }
+
+    
+    )
+    </script>
+    
+</body>
+</html>

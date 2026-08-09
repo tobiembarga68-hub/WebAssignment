@@ -1,15 +1,15 @@
 
   // ---- Data ----
   const products = [
-    { name:"Robe", price:"25000F", rating:4.5, img:"https://picsum.photos/seed/lift-robe/500/500" },
-    { name:"Sneakers", price:"10000F", rating:4.5, img:"https://picsum.photos/seed/lift-sneakers/500/500" },
-    { name:"T-Shirt", price:"7000F", rating:4.5, img:"https://picsum.photos/seed/lift-tshirt/500/500" },
-    { name:"Pullover", price:"8000F", rating:4.5, img:"https://picsum.photos/seed/lift-pullover/500/500" },
+    { name:"Robe", price:"25000F", rating:4.5, img:"./image/robe.jpg" },
+    { name:"Sneakers", price:"10000F", rating:4.5, img:"./image/8033a49a1af88a4e4b3e22abd2795173.jpg" },
+    { name:"T-Shirt", price:"7000F", rating:4.5, img:"./image/t-shirt.jpg" },
+    { name:"Pullover", price:"8000F", rating:4.5, img:"./image/pullover.jpg" },
   ];
   const categories = [
-    { name:"Men", img:"https://picsum.photos/seed/lift-men/400/400" },
-    { name:"Women", img:"https://picsum.photos/seed/lift-women/400/400" },
-    { name:"Accessoires", img:"https://picsum.photos/seed/lift-acc/400/400" },
+    { name:"Men", img:"./image/men.jpg" },
+    { name:"Women", img:"./image/women.jpg" },
+    { name:"Accessoires", img:"./image/2df90591a101fa19843a57507bcb9a72.jpg" },
   ];
   const services = [
     { name:"Fast Delivery", icon:"🚚" },

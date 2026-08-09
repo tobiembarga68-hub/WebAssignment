@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AURA&CO</title>
-    <link rel="icon" href="./image/IMG-20260725-WA0000.jpg" type="image/icons">
+    <title>AURA &CO - size page</title>
+    <link rel="icon" href="./image/aura-logo.svg" type="image/icons">
     <style>
      *{
     margin: 0;
@@ -75,7 +75,7 @@
     justify-content: space-between;
   
  }
- .size div{
+ .size button{
     border: 1px solid var(--line-soft);
     padding: 10px;
     border-radius: 5px;
@@ -133,10 +133,11 @@
         <div class="content">
             <div class="sec">
                 <p>Home/Heauxm/Yang set</p>
-                <br>
+                <br> 
                 <h1>Yang set</h1>
                 <br>
                 <p class="fcfa">25000FRS</p>
+                <!-- <a href="https://github.com/tobiembarga68-hub/WebAssignment">git</a> -->
             </div>    
                 <div class="secPara">
                     <P>We're already on the lookout for the best fabric to bring back your
@@ -157,16 +158,16 @@
                 <p>View chart</p>
             </div>
             <div class="size">
-                <div class="block" id="size1">10</div>
-                <div class="block" id="size2">12</div>
-                <div class="block" id="size3">14</div>
-                <div class="block2" id="size4">16</div>
-                <div class="block" id="size5">18</div>
-                <div class="block" id="size6">20</div>
-                <div class="block" id="size7">20</div>
+                <button class="block" onclick="sizeSelect()">10</button>
+                <button class="block" onclick="sizeSelect()">12</button>
+                <button class="block" onclick="sizeSelect()">14</button>
+                <button class="block2" onclick="sizeSelect()">16</button>
+                <button class="block" onclick="sizeSelect()">18</button>
+                <button class="block" onclick="sizeSelect()">20</button>
+                <button class="block" onclick="sizeSelect()">20</button>
             </div>
             <div class="cart">
-                    <button class="btn">🛒 ADD TO CART</button>
+                    <button class="btn" id="myBtn">🛒 ADD TO CART</button>
                 <div class="sign">
                   <button id="minus">-</button>
                   <span id="count">0</span>
@@ -192,25 +193,13 @@
             display.innerHTML=count;
             }
     }
-    //size of product
-    const size1=document.getElementById("size1");
-    const size2=document.getElementById("size2");
-    const size3=document.getElementById("size3");
-    const size4=document.getElementById("size4");
-    const size5=document.getElementById("size5");
-    const size6=document.getElementById("size6");
-    const size7=document.getElementById("size7");
-
-    const size = [size1,size2,size3,size4,size5,size6,size7];
-
-    size.forEach(function(size){
-        size.onclick = function(){
-            size.forEach(function(div){
-                div.classList.remove("block2");
-            });
-        this.classList.add("block2");
-        };
+    //add to cart button connected to payment page
+    const myBtn = document.getElementById('myBtn')
+    myBtn.addEventListener('click', function(){
+        window.location.href = 'payment.html'
     })
+    
+   
 
     </script>
 </body>

@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AURA &C0 - paymentMethode</title>
+     <link rel="icon" href="./image/aura-logo.svg" type="image/icons">
     <style>
         .payment{
             font-family: Arial, Helvetica, sans-serif;
@@ -19,6 +20,7 @@
             font-weight: bold;
             top: 10px;
             left: 20px;
+            cursor:default;
         }
         .arrowRight{
             position: absolute;
@@ -27,11 +29,14 @@
             font-weight: bold;
             bottom: 10px;
             right: 20px;
+            cursor:default;
+
         }
         h2{
             font-weight: 500;
             font-size: 30px;
             margin: 20px;
+            cursor:default;
         }
         .Methods{
           margin: 100px 0;
@@ -100,12 +105,12 @@
         <div class="arrowLeft"><span style='font-size:100px;'>&#8600;</span></div>
         <h2>Payment Methods</h2>
         <div class="Methods">
-            <button class="MethodMTN">
+            <button class="MethodMTN" onclick="window.location.href='confirmPayment.html'">
                 <span class="my">my</span><br>
                 <div class="mtnLogo">MTN</div>
             </button>
 
-            <button class="MethodOrg">
+            <button class="MethodOrg" onclick="window.location.href='confirmPayment2.html'">
                 <span class="orgLogo">orange<sup>TM</sup></span>
             </button>
         </div>
